@@ -2,13 +2,6 @@
 echo "[+] Installing tools"
 pacman --noconfirm -S grub-efi-x86_64 openssh wget vim git nmap
 
-echo "[+] Installing yaourt"
-pacman --noconfirm -U /opt/mbp/package-query-1.4-1-x86_64.pkg.tar.xz
-pacman --noconfirm -U /opt/mbp/yaourt-1.5-1-any.pkg.tar.xz
-
-echo "[+] Installing AUR packages"
-yaourt --noconfirm -S b43-firmware
-
 echo "[+] Setting up persistence"
 systemctl daemon-reload
 systemctl enable dhcpcd
